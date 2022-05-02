@@ -6,6 +6,8 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
+import com.projeto.MotoLivre.domain.enums.Perfil;
+
 @Entity
 public class Motoboy extends Pessoa{
 	private static final long serialVersionUID = 1L;
@@ -15,6 +17,7 @@ public class Motoboy extends Pessoa{
 	
 	public Motoboy() {
 		super();
+		addPerfil(Perfil.MOTOBOY);
 	}
 
 	public Motoboy(Integer id, String nome, String cpfcnpj, String email, String senha) {
