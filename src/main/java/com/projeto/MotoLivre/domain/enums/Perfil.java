@@ -1,7 +1,7 @@
 package com.projeto.MotoLivre.domain.enums;
 
 public enum Perfil {
-		ADMIN(0, "ROLE_ADMIN"), MOTOBOY(0, "ROLE_MOTOBOY"),ESTABELECIMENTO(2, "ROLE_ESTABELECIMENTO");
+		ADMIN(0, "ROLE_ADMIN"), MOTOBOY(1, "ROLE_MOTOBOY"),ESTABELECIMENTO(2, "ROLE_ESTABELECIMENTO");
 	
 		private Integer codigo;
 		private String descricao;
