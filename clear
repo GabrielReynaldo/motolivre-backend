@@ -1,0 +1,59 @@
+[33mcommit d724e09138c91e57d63e6b19848bfd31e644a56f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: GabrielReynaldo <gabrielreynaldo123@gmai.com>
+Date:   Sat May 14 23:54:07 2022 -0300
+
+     Exceção para objeto não encontrado
+
+[33mcommit d425c8083b004c7ab01442ff202c3086d4977dab[m
+Author: GabrielReynaldo <gabrielreynaldo123@gmai.com>
+Date:   Sat May 14 23:10:31 2022 -0300
+
+    Padrão DTO para estabelecimento
+
+[33mcommit a613d2ea279571f1c03c5799e8664e63a354f0ea[m
+Author: GabrielReynaldo <gabrielreynaldo123@gmai.com>
+Date:   Sat May 14 22:15:12 2022 -0300
+
+    Protegendo aplicação contra serialização
+
+[33mcommit 21d02ca39cab390d76f0755201e9425bf39bd9b8[m
+Author: GabrielReynaldo <gabrielreynaldo123@gmai.com>
+Date:   Tue May 3 16:25:44 2022 -0300
+
+    perfil de desenvolvimento
+
+[33mcommit 0a71f9f09d4380e10dfe0a30515a70d985c476a7[m
+Author: GabrielReynaldo <gabrielreynaldo123@gmai.com>
+Date:   Mon May 2 00:50:24 2022 -0300
+
+    Perfil de teste criado
+
+[33mcommit 25e74d9be01417f5bfacdec3c47c910486c157b2[m
+Author: GabrielReynaldo <gabrielreynaldo123@gmai.com>
+Date:   Mon May 2 00:22:43 2022 -0300
+
+    caarga inicial da base de dados
+
+[33mcommit a9d240dbc9a7ef0634fe37110ca1c39282c776d5[m
+Author: GabrielReynaldo <gabrielreynaldo123@gmai.com>
+Date:   Mon May 2 00:21:45 2022 -0300
+
+    repositories criados
+
+[33mcommit 72d9e0ad50a13e14d8c3ed2925fd370735737fd9[m
+Author: GabrielReynaldo <gabrielreynaldo123@gmai.com>
+Date:   Sun May 1 23:26:58 2022 -0300
+
+    anotacoes JPA para classes de dominio
+
+[33mcommit 6f02a180be5ed3f22bcb18c18fa30a52bbfef9a7[m
+Author: GabrielReynaldo <gabrielreynaldo123@gmai.com>
+Date:   Sun May 1 21:22:07 2022 -0300
+
+    tipos enumerados criados
+
+[33mcommit 621a807bdc8666695dd01973602a6f13c66d8917[m
+Author: GabrielReynaldo <gabrielreynaldo123@gmai.com>
+Date:   Sun May 1 20:31:55 2022 -0300
+
+    projeto iniciado

@@ -1,5 +1,6 @@
 package com.projeto.MotoLivre.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,5 +19,9 @@ public class EstabelecimentoService {
 	public Estabelecimento findById(Integer id) {
 		Optional<Estabelecimento> obj = repository.findById(id);
 		return obj.orElseThrow(() -> new ObjectnotFoundException("Objeto não encontrado! id:"+ id));
+	}
+
+	public List<Estabelecimento> findAll() {
+		return repository.findAll();
 	}
 }
