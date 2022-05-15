@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.projeto.MotoLivre.domain.Estabelecimento;
+import com.projeto.MotoLivre.domain.dtos.EstabelecimentoDTO;
 import com.projeto.MotoLivre.services.EstabelecimentoService;
 
 
@@ -22,8 +23,8 @@ public class EstabelecimentoResource {
 		private EstabelecimentoService service;
 		
 		@GetMapping(value = "/{id}")
-		public ResponseEntity<Estabelecimento> finById(@PathVariable Integer id){
+		public ResponseEntity<EstabelecimentoDTO> finById(@PathVariable Integer id){
 			Estabelecimento obj = service.findById(id);
-			return ResponseEntity.ok().body(obj);
+			return ResponseEntity.ok().body(new EstabelecimentoDTO(obj));
 		}
 }
