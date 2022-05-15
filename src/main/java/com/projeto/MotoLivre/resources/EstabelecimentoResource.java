@@ -25,6 +25,6 @@ public class EstabelecimentoResource {
 		@GetMapping(value = "/{id}")
 		public ResponseEntity<EstabelecimentoDTO> finById(@PathVariable Integer id){
 			Estabelecimento obj = service.findById(id);
-			return ResponseEntity.ok().body(new EstabelecimentoDTO(obj));
+			return ResponseEntity.ok().body(new EstabelecimentoDTO(obj)); 
 		}
 }
