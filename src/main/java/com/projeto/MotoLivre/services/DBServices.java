@@ -31,8 +31,7 @@ public class DBServices {
 		
 		
 		Estabelecimento est1 = new Estabelecimento(null, "Gabriel Henrique", "26252386073", "gabriel@gmail.com", "123");
-		Estabelecimento est2 = new Estabelecimento(null, "Gabriel ", "26252386258", "gabriel@gmail.com", "456");
-		Estabelecimento est3 = new Estabelecimento(null, " Henrique", "2625238177", "gabriel@gmail.com", "789");
+
 		
 		est1.addPerfil(Perfil.ADMIN);
 		

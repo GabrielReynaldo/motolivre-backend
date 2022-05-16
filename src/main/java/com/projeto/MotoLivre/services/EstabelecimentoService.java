@@ -3,6 +3,8 @@ package com.projeto.MotoLivre.services;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,6 +39,14 @@ public class EstabelecimentoService {
 		Estabelecimento newObj = new Estabelecimento(objDTO);
 		return repository.save(newObj);
 	}
+	public Estabelecimento update(Integer id, @Valid EstabelecimentoDTO objDTO) {
+		objDTO.setId(id);
+		Estabelecimento oldObj = findById(id);
+		validaPorCpfEEmail(objDTO);
+		oldObj = new Estabelecimento(objDTO); 
+		return repository.save(oldObj);
+	}
+	
 
 	private void validaPorCpfEEmail(EstabelecimentoDTO objDTO) {
 		Optional<Pessoa> obj = pessoaRepository.findByCpfcnpj(objDTO.getCpfcnpj());
@@ -48,6 +58,10 @@ public class EstabelecimentoService {
 			throw new DataIntegrityViolationException("E-mail já cadastrado no sistema!");
 		}
 	}
+
+	
+
+	
 	
 	
 }
