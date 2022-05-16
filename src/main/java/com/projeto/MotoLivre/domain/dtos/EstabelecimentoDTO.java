@@ -37,7 +37,7 @@ public class EstabelecimentoDTO implements Serializable {
 		this.cpfcnpj = obj.getCpfcnpj();
 		this.email = obj.getEmail();
 		this.senha = obj.getSenha();
-		this.perfis = obj.getPerfils().stream().map(x -> x.getCodigo()).collect(Collectors.toSet());
+		this.perfis = obj.getPerfis().stream().map(x -> x.getCodigo()).collect(Collectors.toSet());
 		this.dataCriacao = obj.getDataCriacao();
 	}
 

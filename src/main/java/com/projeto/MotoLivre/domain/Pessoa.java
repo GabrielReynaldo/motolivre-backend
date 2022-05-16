@@ -85,7 +85,7 @@ public abstract class Pessoa implements Serializable {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public Set<Perfil> getPerfils() {
+	public Set<Perfil> getPerfis() {
 		return perfis.stream().map(x -> Perfil.toEnum(x)).collect(Collectors.toSet());
 	}
 	public void addPerfil(Perfil perfil) {
