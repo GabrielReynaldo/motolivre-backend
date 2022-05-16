@@ -6,6 +6,8 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.projeto.MotoLivre.domain.Estabelecimento;
 import com.projeto.MotoLivre.domain.enums.Perfil;
@@ -15,9 +17,13 @@ public class EstabelecimentoDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	protected Integer id;
+	@NotNull(message = "O campo nome destacado é requirido")
 	protected String nome;
+	@NotNull(message = "O campo CpfCnpj destacado é requirido")
 	protected String cpfcnpj;
+	@NotNull(message = "O campo Email destacado é requirido")
 	protected String email;
+	@NotNull(message = "O campo Senha destacado é requirido")
 	protected String senha;
 	
 	protected Set<Integer> perfis = new HashSet<>();
