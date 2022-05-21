@@ -1,5 +1,6 @@
 package com.projeto.MotoLivre.services;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -40,6 +41,13 @@ public class ChamadoService {
 		return repository.save(newChamado(objDTO));
 	}
 	
+	public Chamado update(Integer id, @Valid ChamadoDTO objDTO) {
+		objDTO.setId(id);
+		Chamado oldObj = findById(id);
+		oldObj = newChamado(objDTO);
+		return repository.save(oldObj);
+	}
+	
 	private Chamado newChamado(ChamadoDTO obj) {
 		Estabelecimento estabelecimento = estabelecimentoservice.findById(obj.getEstabelecimento());
 		Motoboy motoboy = motoboyservice.findById(obj.getMotoboy());
@@ -48,6 +56,11 @@ public class ChamadoService {
 		if(obj.getId() != null) {
 			chamado.setId(obj.getId());
 		}
+		if(obj.getStatus().equals(2)) {
+			chamado.setDataFechamento(LocalDate.now());
+		}
+		
+		
 		chamado.setEstabelecimento(estabelecimento);
 		chamado.setMotoboy(motoboy);
 		chamado.setPrioridade(Prioridade.toEnum(obj.getPrioridade()));
@@ -58,4 +71,6 @@ public class ChamadoService {
 		
 		
 	}
+
+	
 }
