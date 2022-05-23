@@ -6,6 +6,7 @@ import java.util.Optional;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.projeto.MotoLivre.domain.Motoboy;
@@ -23,6 +24,8 @@ public class MotoboyService {
 	private MotoboyRepository repository;
 	@Autowired
 	private PessoaRepository pessoaRepository;
+	@Autowired
+	private BCryptPasswordEncoder encoder;
 	
 	public Motoboy findById(Integer id) {
 		Optional<Motoboy> obj = repository.findById(id);
@@ -35,6 +38,7 @@ public class MotoboyService {
 
 	public Motoboy create(MotoboyDTO objDTO) {
 		objDTO.setId(null);
+		objDTO.setSenha(encoder.encode(objDTO.getSenha()));
 		validaPorCpfEEmail(objDTO);
 		Motoboy newObj = new Motoboy(objDTO);
 		return repository.save(newObj);
